@@ -21,4 +21,4 @@ for index, row in final_df.iterrows():
     final_df.at[index, 'Results'] = stdout.strip()
 
 # Save the updated DataFrame to a CSV file
-final_df.to_csv('results.csv', index=False)
+final_df.to_csv('results2.csv', index=False)
