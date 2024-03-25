@@ -1,27 +1,24 @@
 import pandas as pd
 import subprocess
 
-positives_df = pd.read_csv('positives.csv')
-negatives_df = pd.read_csv('negatives.csv')
-combined_df = pd.concat([positives_df, negatives_df])
-final_df = combined_df.sample(frac=1).reset_index(drop=True)
-#convert final_df into a csv file and save it
-final_df.to_csv('final.csv', index=False)
+# Load the final dataset
+final_df = pd.read_csv('final.csv')
 
-
+# Define the prompt
 prompt = 'You are a financial advisor that responds in JSON. Could this text belong to a website that is a cryptocurrency news site? Say yes or no, nothing else.'
 
+# Initialize a list to store the results
+final_df['Results'] = ''  # Add an empty column for results
+
 for index, row in final_df.iterrows():
-    
     input_text = f'{prompt} {row["Text"]}'
-
     command = ['ollama', 'run', 'llama2', input_text]
-
-    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     stdout, stderr = process.communicate()
 
-    print(f'URL: {row["URL"]}, Response: {stdout.decode()}')
+    # Assuming stdout contains the desired output
+    # Update the DataFrame directly with the result
+    final_df.at[index, 'Results'] = stdout.strip()
 
-    if stderr:
-        print(stderr.decode())
+# Save the updated DataFrame to a CSV file
+final_df.to_csv('results.csv', index=False)
