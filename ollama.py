@@ -1,14 +1,18 @@
 import pandas as pd
 import subprocess
 
-df = pd.read_csv('ocr.csv')
-new_txt = [x.strip() for x in open('true_positive_urls.txt').readlines()]
+positives_df = pd.read_csv('positives.csv')
+negatives_df = pd.read_csv('negatives.csv')
+combined_df = pd.concat([positives_df, negatives_df])
+final_df = combined_df.sample(frac=1).reset_index(drop=True)
+#convert final_df into a csv file and save it
+final_df.to_csv('final.csv', index=False)
+
 
 prompt = 'You are a financial advisor that responds in JSON. Could this text belong to a website that is a cryptocurrency news site? Say yes or no, nothing else.'
 
-for index, row in df.iterrows():
-    if row["URL"] not in new_txt:
-        continue
+for index, row in final_df.iterrows():
+    
     input_text = f'{prompt} {row["Text"]}'
 
     command = ['ollama', 'run', 'llama2', input_text]
