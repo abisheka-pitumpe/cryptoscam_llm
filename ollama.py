@@ -2,15 +2,15 @@ import pandas as pd
 import subprocess
 
 # Load the final dataset
-final_df = pd.read_csv('final.csv')
+df = pd.read_csv('merged_randomized.csv')
 
 # Define the prompt
-prompt = 'You are a financial advisor that responds in JSON. Could this text belong to a website that is a cryptocurrency news site? Say yes or no, nothing else.'
+prompt = 'You are a financial advisor that responds in JSON. Could this text belong to a website that offers investment plans and guarentees high profits? Say yes or no, nothing else.'
 
 # Initialize a list to store the results
-final_df['Results'] = ''  # Add an empty column for results
+df['LLM Results'] = ''  # Add an empty column for results
 
-for index, row in final_df.iterrows():
+for index, row in df.iterrows():
     input_text = f'{prompt} {row["Text"]}'
     command = ['ollama', 'run', 'llama2', input_text]
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
@@ -18,7 +18,7 @@ for index, row in final_df.iterrows():
 
     # Assuming stdout contains the desired output
     # Update the DataFrame directly with the result
-    final_df.at[index, 'Results'] = stdout.strip()
+    df.at[index, 'LLM Results'] = stdout.strip()
 
 # Save the updated DataFrame to a CSV file
-final_df.to_csv('results2.csv', index=False)
+df.to_csv('results.csv', index=False)
