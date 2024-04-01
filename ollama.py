@@ -12,7 +12,7 @@ df['LLM Results'] = ''  # Add an empty column for results
 
 for index, row in df.iterrows():
     input_text = f'{prompt} {row["Text"]}'
-    command = ['ollama', 'run', 'llama2', input_text]
+    command = ['ollama', 'run', 'llama2:13b', input_text]
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     stdout, stderr = process.communicate()
 
