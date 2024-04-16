@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --job-name=ollamajob.job
+#SBATCH --output=/home/cpitumpeappu/cryptoscam/llm/cryptoscam_llm/ollama_job_out.txt
+#SBATCH --error=/home/cpitumpeappu/cryptoscam/llm/cryptoscam_llm/ollama_job_err.txt
+#SBATCH --gres=gpu:2
+
+# Test nvidia-smi
+nvidia-smi
+
+/home/cpitumpeappu/cryptoscam/llm/ollama-linux-amd64.1 serve 
+/home/cpitumpeappu/cryptoscam/llm/ollama-linux-amd64.1 list
+# /home/cpitumpeappu/cryptoscam/llm/ollama-linux-amd64.1 pull llama2:13b
+
+# Test Python conda environment
+source activate /home/cpitumpeappu/anaconda3/envs/new_env
+
+/home/cpitumpeappu/anaconda3/envs/new_env/bin/python3.8 /home/cpitumpeappu/cryptoscam/llm/cryptoscam_llm/ollama.py
+
