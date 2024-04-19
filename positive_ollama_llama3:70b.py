@@ -28,7 +28,7 @@ for index, row in df.iterrows():
     input_text = "\n".join([f"{msg['role']}: {msg['content']}" for msg in input_messages])
     
     # Run Ollama
-    command = [ollama_binary, 'run', 'llama3:8b', input_text]
+    command = [ollama_binary, 'run', 'llama3:70b', input_text]
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     stdout, stderr = process.communicate()
     
@@ -39,4 +39,4 @@ for index, row in df.iterrows():
     df.at[index, 'LLM Results'] = chat_response
 
 # Save the updated DataFrame to a CSV file
-df.to_csv('results_pos_llama3_8b.csv', index=False)
+df.to_csv('results_pos_llama3_70b.csv', index=False)

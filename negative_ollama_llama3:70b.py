@@ -2,7 +2,7 @@ import pandas as pd
 import subprocess
 
 # Load the final dataset
-df = pd.read_csv('positives_150.csv')
+df = pd.read_csv('negatives_150.csv')
 print("Loaded CSV")
 # Define the prompts
 system_prompt = "You are a financial advisor programmed to respond in JSON format. Your responses are limited to 'yes' or 'no', represented by the 'answer' key, and you must provide a one-word reasoning for your decision under the 'reason' key. Be sure of your answer."
@@ -23,20 +23,21 @@ for index, row in df.iterrows():
         {"role": "assistant", "content": assistant_prompt},
         {"role": "user", "content": row["Text"]}
     ]
-    
+
     # Convert messages to text
     input_text = "\n".join([f"{msg['role']}: {msg['content']}" for msg in input_messages])
-    
+
     # Run Ollama
-    command = [ollama_binary, 'run', 'llama3:8b', input_text]
+    command = [ollama_binary, 'run', 'llama3:70b', input_text]
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     stdout, stderr = process.communicate()
-    
+
     # Extract response
     chat_response = stdout.strip()
-    
+
     # Save result to DataFrame
     df.at[index, 'LLM Results'] = chat_response
 
 # Save the updated DataFrame to a CSV file
-df.to_csv('results_pos_llama3_8b.csv', index=False)
+df.to_csv('results_neg_llama3_70b.csv', index=False)
+

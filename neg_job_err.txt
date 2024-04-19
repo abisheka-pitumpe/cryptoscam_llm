@@ -1,65 +1,63 @@
 Error: could not connect to ollama app, is it running?
-time=2024-04-15T22:09:12.677-04:00 level=INFO source=images.go:804 msg="total blobs: 10"
-time=2024-04-15T22:09:12.680-04:00 level=INFO source=images.go:811 msg="total unused blobs removed: 0"
-time=2024-04-15T22:09:12.682-04:00 level=INFO source=routes.go:1118 msg="Listening on 127.0.0.1:11434 (version 0.1.30)"
-time=2024-04-15T22:09:12.694-04:00 level=INFO source=payload_common.go:113 msg="Extracting dynamic libraries to /tmp/ollama1742279067/runners ..."
-time=2024-04-15T22:09:17.593-04:00 level=INFO source=payload_common.go:140 msg="Dynamic LLM libraries [rocm_v60000 cpu cpu_avx cpu_avx2 cuda_v11]"
-time=2024-04-15T22:09:17.594-04:00 level=INFO source=gpu.go:115 msg="Detecting GPU type"
-time=2024-04-15T22:09:17.594-04:00 level=INFO source=gpu.go:265 msg="Searching for GPU management library libcudart.so*"
-time=2024-04-15T22:09:17.595-04:00 level=INFO source=gpu.go:311 msg="Discovered GPU libraries: [/tmp/ollama1742279067/runners/cuda_v11/libcudart.so.11.0 /usr/lib/x86_64-linux-gnu/libcudart.so.9.1.85]"
-time=2024-04-15T22:09:17.782-04:00 level=INFO source=gpu.go:120 msg="Nvidia GPU detected via cudart"
-time=2024-04-15T22:09:17.782-04:00 level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
-time=2024-04-15T22:09:18.172-04:00 level=INFO source=gpu.go:188 msg="[cudart] CUDART CUDA Compute Capability detected: 7.0"
-time=2024-04-15T22:09:18.445-04:00 level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
-time=2024-04-15T22:09:18.445-04:00 level=INFO source=gpu.go:188 msg="[cudart] CUDART CUDA Compute Capability detected: 7.0"
-time=2024-04-15T22:09:18.445-04:00 level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
-time=2024-04-15T22:09:18.445-04:00 level=INFO source=gpu.go:188 msg="[cudart] CUDART CUDA Compute Capability detected: 7.0"
-time=2024-04-15T22:09:18.445-04:00 level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
-time=2024-04-15T22:09:18.453-04:00 level=INFO source=dyn_ext_server.go:87 msg="Loading Dynamic llm server: /tmp/ollama1742279067/runners/cuda_v11/libext_server.so"
-time=2024-04-15T22:09:18.453-04:00 level=INFO source=dyn_ext_server.go:147 msg="Initializing llama server"
-llama_model_loader: loaded meta data with 23 key-value pairs and 723 tensors from /home/cpitumpeappu/.ollama/models/blobs/sha256-68bbe6dc9cf42eb60c9a7f96137fb8d472f752de6ebf53e9942f267f1a1e2577 (version GGUF V3 (latest))
+time=2024-04-18T14:10:22.679-04:00 level=INFO source=images.go:804 msg="total blobs: 15"
+time=2024-04-18T14:10:22.683-04:00 level=INFO source=images.go:811 msg="total unused blobs removed: 0"
+time=2024-04-18T14:10:22.686-04:00 level=INFO source=routes.go:1118 msg="Listening on 127.0.0.1:11434 (version 0.1.30)"
+time=2024-04-18T14:10:22.733-04:00 level=INFO source=payload_common.go:113 msg="Extracting dynamic libraries to /tmp/ollama2014223189/runners ..."
+time=2024-04-18T14:10:27.530-04:00 level=INFO source=payload_common.go:140 msg="Dynamic LLM libraries [rocm_v60000 cpu cpu_avx cpu_avx2 cuda_v11]"
+time=2024-04-18T14:10:27.530-04:00 level=INFO source=gpu.go:115 msg="Detecting GPU type"
+time=2024-04-18T14:10:27.530-04:00 level=INFO source=gpu.go:265 msg="Searching for GPU management library libcudart.so*"
+time=2024-04-18T14:10:27.532-04:00 level=INFO source=gpu.go:311 msg="Discovered GPU libraries: [/tmp/ollama2014223189/runners/cuda_v11/libcudart.so.11.0 /usr/lib/x86_64-linux-gnu/libcudart.so.9.1.85]"
+time=2024-04-18T14:10:27.706-04:00 level=INFO source=gpu.go:120 msg="Nvidia GPU detected via cudart"
+time=2024-04-18T14:10:27.706-04:00 level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-04-18T14:10:28.097-04:00 level=INFO source=gpu.go:188 msg="[cudart] CUDART CUDA Compute Capability detected: 7.0"
+time=2024-04-18T14:10:29.219-04:00 level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-04-18T14:10:29.220-04:00 level=INFO source=gpu.go:188 msg="[cudart] CUDART CUDA Compute Capability detected: 7.0"
+time=2024-04-18T14:10:29.220-04:00 level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-04-18T14:10:29.220-04:00 level=INFO source=gpu.go:188 msg="[cudart] CUDART CUDA Compute Capability detected: 7.0"
+time=2024-04-18T14:10:29.220-04:00 level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-04-18T14:10:29.227-04:00 level=INFO source=dyn_ext_server.go:87 msg="Loading Dynamic llm server: /tmp/ollama2014223189/runners/cuda_v11/libext_server.so"
+time=2024-04-18T14:10:29.227-04:00 level=INFO source=dyn_ext_server.go:147 msg="Initializing llama server"
+llama_model_loader: loaded meta data with 21 key-value pairs and 291 tensors from /home/cpitumpeappu/.ollama/models/blobs/sha256-f5194afb9f88b0339cf101ff734a8539fe6a77be179a495fdb80f63d979e1878 (version GGUF V3 (latest))
 llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
 llama_model_loader: - kv   0:                       general.architecture str              = llama
-llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
-llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
-llama_model_loader: - kv   3:                     llama.embedding_length u32              = 8192
-llama_model_loader: - kv   4:                          llama.block_count u32              = 80
-llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 28672
-llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
-llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 64
-llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   1:                               general.name str              = Meta-Llama-3-8B-Instruct
+llama_model_loader: - kv   2:                          llama.block_count u32              = 32
+llama_model_loader: - kv   3:                       llama.context_length u32              = 8192
+llama_model_loader: - kv   4:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv   6:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   7:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   8:                       llama.rope.freq_base f32              = 500000.000000
 llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
 llama_model_loader: - kv  10:                          general.file_type u32              = 2
-llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
-llama_model_loader: - kv  12:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
-llama_model_loader: - kv  13:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
-llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
-llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,61249]   = ["▁ t", "e r", "i n", "▁ a", "e n...
-llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 1
-llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 2
-llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 0
-llama_model_loader: - kv  19:               tokenizer.ggml.add_bos_token bool             = true
-llama_model_loader: - kv  20:               tokenizer.ggml.add_eos_token bool             = false
-llama_model_loader: - kv  21:                    tokenizer.chat_template str              = {% if messages[0]['role'] == 'system'...
-llama_model_loader: - kv  22:               general.quantization_version u32              = 2
-llama_model_loader: - type  f32:  161 tensors
-llama_model_loader: - type q4_0:  561 tensors
+llama_model_loader: - kv  11:                           llama.vocab_size u32              = 128256
+llama_model_loader: - kv  12:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,128256]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,128256]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  16:                      tokenizer.ggml.merges arr[str,280147]  = ["Ġ Ġ", "Ġ ĠĠĠ", "ĠĠ ĠĠ", "...
+llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 128000
+llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 128001
+llama_model_loader: - kv  19:                    tokenizer.chat_template str              = {% set loop_messages = messages %}{% ...
+llama_model_loader: - kv  20:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_0:  225 tensors
 llama_model_loader: - type q6_K:    1 tensors
-llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_vocab: special tokens definition check successful ( 256/128256 ).
 llm_load_print_meta: format           = GGUF V3 (latest)
 llm_load_print_meta: arch             = llama
-llm_load_print_meta: vocab type       = SPM
-llm_load_print_meta: n_vocab          = 32000
-llm_load_print_meta: n_merges         = 0
-llm_load_print_meta: n_ctx_train      = 4096
-llm_load_print_meta: n_embd           = 8192
-llm_load_print_meta: n_head           = 64
+llm_load_print_meta: vocab type       = BPE
+llm_load_print_meta: n_vocab          = 128256
+llm_load_print_meta: n_merges         = 280147
+llm_load_print_meta: n_ctx_train      = 8192
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_head           = 32
 llm_load_print_meta: n_head_kv        = 8
-llm_load_print_meta: n_layer          = 80
+llm_load_print_meta: n_layer          = 32
 llm_load_print_meta: n_rot            = 128
 llm_load_print_meta: n_embd_head_k    = 128
 llm_load_print_meta: n_embd_head_v    = 128
-llm_load_print_meta: n_gqa            = 8
+llm_load_print_meta: n_gqa            = 4
 llm_load_print_meta: n_embd_k_gqa     = 1024
 llm_load_print_meta: n_embd_v_gqa     = 1024
 llm_load_print_meta: f_norm_eps       = 0.0e+00
@@ -67,30 +65,29 @@ llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
 llm_load_print_meta: f_clamp_kqv      = 0.0e+00
 llm_load_print_meta: f_max_alibi_bias = 0.0e+00
 llm_load_print_meta: f_logit_scale    = 0.0e+00
-llm_load_print_meta: n_ff             = 28672
+llm_load_print_meta: n_ff             = 14336
 llm_load_print_meta: n_expert         = 0
 llm_load_print_meta: n_expert_used    = 0
 llm_load_print_meta: causal attn      = 1
 llm_load_print_meta: pooling type     = 0
 llm_load_print_meta: rope type        = 0
 llm_load_print_meta: rope scaling     = linear
-llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_base_train  = 500000.0
 llm_load_print_meta: freq_scale_train = 1
-llm_load_print_meta: n_yarn_orig_ctx  = 4096
+llm_load_print_meta: n_yarn_orig_ctx  = 8192
 llm_load_print_meta: rope_finetuned   = unknown
 llm_load_print_meta: ssm_d_conv       = 0
 llm_load_print_meta: ssm_d_inner      = 0
 llm_load_print_meta: ssm_d_state      = 0
 llm_load_print_meta: ssm_dt_rank      = 0
-llm_load_print_meta: model type       = 70B
+llm_load_print_meta: model type       = 7B
 llm_load_print_meta: model ftype      = Q4_0
-llm_load_print_meta: model params     = 68.98 B
-llm_load_print_meta: model size       = 36.20 GiB (4.51 BPW) 
-llm_load_print_meta: general.name     = LLaMA v2
-llm_load_print_meta: BOS token        = 1 '<s>'
-llm_load_print_meta: EOS token        = 2 '</s>'
-llm_load_print_meta: UNK token        = 0 '<unk>'
-llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_print_meta: model params     = 8.03 B
+llm_load_print_meta: model size       = 4.33 GiB (4.64 BPW) 
+llm_load_print_meta: general.name     = Meta-Llama-3-8B-Instruct
+llm_load_print_meta: BOS token        = 128000 '[PAD128000]'
+llm_load_print_meta: EOS token        = 128001 '<|begin_of_text|>'
+llm_load_print_meta: LF token         = 128 'Ä'
 ggml_cuda_init: GGML_CUDA_FORCE_MMQ:   yes
 ggml_cuda_init: CUDA_USE_TENSOR_CORES: no
 ggml_cuda_init: found 4 CUDA devices:
@@ -98,33 +95,33 @@ ggml_cuda_init: found 4 CUDA devices:
   Device 1: Tesla V100-SXM2-32GB, compute capability 7.0, VMM: yes
   Device 2: Tesla V100-SXM2-32GB, compute capability 7.0, VMM: yes
   Device 3: Tesla V100-SXM2-32GB, compute capability 7.0, VMM: yes
-llm_load_tensors: ggml ctx size =    1.38 MiB
-llm_load_tensors: offloading 80 repeating layers to GPU
+llm_load_tensors: ggml ctx size =    0.56 MiB
+llm_load_tensors: offloading 32 repeating layers to GPU
 llm_load_tensors: offloading non-repeating layers to GPU
-llm_load_tensors: offloaded 81/81 layers to GPU
-llm_load_tensors:        CPU buffer size =   140.62 MiB
-llm_load_tensors:      CUDA0 buffer size =  9640.31 MiB
-llm_load_tensors:      CUDA1 buffer size =  9181.25 MiB
-llm_load_tensors:      CUDA2 buffer size =  9181.25 MiB
-llm_load_tensors:      CUDA3 buffer size =  8927.30 MiB
-....................................................................................................
+llm_load_tensors: offloaded 33/33 layers to GPU
+llm_load_tensors:        CPU buffer size =   281.81 MiB
+llm_load_tensors:      CUDA0 buffer size =  1053.28 MiB
+llm_load_tensors:      CUDA1 buffer size =   936.25 MiB
+llm_load_tensors:      CUDA2 buffer size =   936.25 MiB
+llm_load_tensors:      CUDA3 buffer size =  1230.21 MiB
+.......................................................................................
 llama_new_context_with_model: n_ctx      = 2048
 llama_new_context_with_model: n_batch    = 512
 llama_new_context_with_model: n_ubatch   = 512
-llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_base  = 500000.0
 llama_new_context_with_model: freq_scale = 1
-llama_kv_cache_init:      CUDA0 KV buffer size =   168.00 MiB
-llama_kv_cache_init:      CUDA1 KV buffer size =   160.00 MiB
-llama_kv_cache_init:      CUDA2 KV buffer size =   160.00 MiB
-llama_kv_cache_init:      CUDA3 KV buffer size =   152.00 MiB
-llama_new_context_with_model: KV self size  =  640.00 MiB, K (f16):  320.00 MiB, V (f16):  320.00 MiB
-llama_new_context_with_model:  CUDA_Host  output buffer size =    78.50 MiB
+llama_kv_cache_init:      CUDA0 KV buffer size =    72.00 MiB
+llama_kv_cache_init:      CUDA1 KV buffer size =    64.00 MiB
+llama_kv_cache_init:      CUDA2 KV buffer size =    64.00 MiB
+llama_kv_cache_init:      CUDA3 KV buffer size =    56.00 MiB
+llama_new_context_with_model: KV self size  =  256.00 MiB, K (f16):  128.00 MiB, V (f16):  128.00 MiB
+llama_new_context_with_model:  CUDA_Host  output buffer size =   258.50 MiB
 llama_new_context_with_model: pipeline parallelism enabled (n_copies=4)
-llama_new_context_with_model:      CUDA0 compute buffer size =   400.01 MiB
-llama_new_context_with_model:      CUDA1 compute buffer size =   400.01 MiB
-llama_new_context_with_model:      CUDA2 compute buffer size =   400.01 MiB
-llama_new_context_with_model:      CUDA3 compute buffer size =   400.01 MiB
-llama_new_context_with_model:  CUDA_Host compute buffer size =    32.02 MiB
-llama_new_context_with_model: graph nodes  = 2644
+llama_new_context_with_model:      CUDA0 compute buffer size =   208.01 MiB
+llama_new_context_with_model:      CUDA1 compute buffer size =   208.01 MiB
+llama_new_context_with_model:      CUDA2 compute buffer size =   208.01 MiB
+llama_new_context_with_model:      CUDA3 compute buffer size =   314.51 MiB
+llama_new_context_with_model:  CUDA_Host compute buffer size =    24.02 MiB
+llama_new_context_with_model: graph nodes  = 1060
 llama_new_context_with_model: graph splits = 5
-time=2024-04-15T22:09:31.880-04:00 level=INFO source=dyn_ext_server.go:159 msg="Starting llama main loop"
+time=2024-04-18T14:10:37.543-04:00 level=INFO source=dyn_ext_server.go:159 msg="Starting llama main loop"

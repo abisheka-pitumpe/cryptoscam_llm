@@ -1,0 +1,6 @@
+Error: could not connect to ollama app, is it running?
+time=2024-04-18T17:25:26.737-04:00 level=INFO source=images.go:804 msg="total blobs: 17"
+time=2024-04-18T17:25:26.745-04:00 level=INFO source=images.go:811 msg="total unused blobs removed: 0"
+time=2024-04-18T17:25:26.747-04:00 level=INFO source=routes.go:1118 msg="Listening on 127.0.0.1:11434 (version 0.1.30)"
+time=2024-04-18T17:25:26.812-04:00 level=INFO source=payload_common.go:113 msg="Extracting dynamic libraries to /tmp/ollama2254926989/runners ..."
+/home/cpitumpeappu/anaconda3/envs/new_env/bin/python3.8: can't open file '/home/cpitumpeappu/cryptoscam/llm/cryptoscam_llm/negative_ollama_llama3:70b': [Errno 2] No such file or directory

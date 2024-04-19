@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=test.job
+#SBATCH --output=/home/cpitumpeappu/cryptoscam/llm/cryptoscam_llm/neg_llama3:70bjob_out.txt
+#SBATCH --error=/home/cpitumpeappu/cryptoscam/llm/cryptoscam_llm/neg_llama3:70bjob_err.txt
+#SBATCH --gres=gpu:4
+#SBATCH --mem=0
+
+echo "Starting"
+
+/home/cpitumpeappu/cryptoscam/llm/ollama-linux-amd64.1 serve &
+echo "served"
+/home/cpitumpeappu/cryptoscam/llm/ollama-linux-amd64.1 list
+echo "should be listed"
+
+# Test Python conda environment
+source activate /home/cpitumpeappu/anaconda3/envs/new_env
+/home/cpitumpeappu/anaconda3/envs/new_env/bin/python3.8 /home/cpitumpeappu/cryptoscam/llm/cryptoscam_llm/negative_ollama_llama3:70b
